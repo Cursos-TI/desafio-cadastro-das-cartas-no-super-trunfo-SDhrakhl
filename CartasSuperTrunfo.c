@@ -7,7 +7,7 @@ int main() {
     int populacao1;
     float area1; // Área em Kilômetros Quadrados.
     float pib1;
-    int pt1; // PT = Pontos Turísticos.
+    int pt1;
 
     // Separação.
 
@@ -22,7 +22,7 @@ int main() {
     printf("Insira as informações da primeira carta: \n");
     // A inserção de dados fica aqui.
     printf("Estado: \n");
-    scanf(" %s", estado1);
+    scanf("%s", estado1);
 
     printf("Codigo: \n");
     scanf("%s", codigo1);
@@ -41,6 +41,8 @@ int main() {
 
     printf("Número de Pontos Turísticos: \n");
     scanf("%i", &pt1);
+    float dp = ((float)populacao1 / area1); // DP = Densidade Populacional. Formatar valores para %.2f
+    float pibpc = (pib1 / (float)populacao1); // pibpc = PIB per Capita. Formatar valores para %.2f
 
     printf("Insira as informações da segunda carta: \n");
     //Inserção de dados da segunda carta.
@@ -64,12 +66,14 @@ int main() {
 
     printf("Número de Pontos Turísticos: \n");
     scanf("%i", &pt2);
+    float dp2 = ((float)populacao2 / area2); // DP = Densidade Populacional. Formatar valores para %.2f
+    float pibpc2 = (pib2 / (float)populacao2); // pibpc = PIB per Capita. Formatar valores para %.2f
 
     printf("\nEstas são as cartas:\n");
     // Impressão dos dados das cartas é feita uma após a outra para deixar mais organizado e por medo de quebrar o código.
 
-    printf("Estado: %s\n Código: %s\n Nome da Cidade: %s\n População: %i\n Área em Quilômetros Quadrados: %f\n PIB: %f\n Números de Pontos Turísticos: %i\n", estado1, codigo1, nomecidade1, populacao1, area1, pib1, pt1);
-    printf("Estado: %s\n Código: %s\n Nome da Cidade: %s\n População: %i\n Área em Quilômetros Quadrados: %f\n PIB: %f\n Números de Pontos Turísticos: %i\n", estado2, codigo2, nomecidade2, populacao2, area2, pib2, pt2);
+    printf(" Estado: %s\n Código: %s\n Nome da Cidade: %s\n População: %i\n Área em Quilômetros Quadrados: %f\n PIB: %f\n Números de Pontos Turísticos: %i\n Densidade Populacional: %.2f\n PIB per Capita: %.2f\n", estado1, codigo1, nomecidade1, populacao1, area1, pib1, pt1, dp, pibpc);
+    printf(" Estado: %s\n Código: %s\n Nome da Cidade: %s\n População: %i\n Área em Quilômetros Quadrados: %f\n PIB: %f\n Números de Pontos Turísticos: %i\n Densidade Populacional: %.2f\n PIB per Capita: %.2f\n", estado2, codigo2, nomecidade2, populacao2, area2, pib2, pt2, dp2, pibpc2);
 
-return 0;
+    return 0;
 }
